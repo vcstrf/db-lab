@@ -33,6 +33,12 @@ docker-compose up
 
 ## Скриншоты интерфейса
 ![1](https://github.com/vcstrf/db-lab/blob/main/static/1.png)
+
+
 ![2](https://github.com/vcstrf/db-lab/blob/main/static/2.png)
+
+
 ![3](https://github.com/vcstrf/db-lab/blob/main/static/3.png)
+
+
 ![4](https://github.com/vcstrf/db-lab/blob/main/static/4.png)
