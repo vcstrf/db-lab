@@ -1,0 +1,166 @@
+header {
+    align-content: center;
+    text-align: center;
+}
+
+body {
+    font-family: "iA Writer Quattro S";
+    background-color: #a8a8a8;
+}
+
+@font-face {
+    font-family: "iA Writer Quattro S";
+    src: url('./src/fonts/iAWriterQuattroS-Regular.eot'); 
+    src: url('./src/fonts/iAWriterQuattroS-Regular.woff') format('woff'), 
+         url('./src/fonts/iAWriterQuattroS-Regular.ttf')  format('truetype'),
+         url('./src/fonts/iAWriterQuattroS-Regular.woff2') format('woff2'); 
+}
+
+h1 {
+    font-size: 48px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 300px;
+    min-width: 300px;
+    max-width: 400px;
+    position: relative;
+    border: 1px solid #424242;
+    background-color: white;
+}
+
+.product-name {
+    display: flex;
+    padding: 20px 5px 20px 5px;
+    height: 60px;
+    align-items: center;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    object-fit: contain;
+    max-height: 300px;
+}
+
+.search {
+    display: flex;
+    width: 30%;
+}
+
+.search-button {
+    font-family: "iA Writer Quattro S";
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 24px;
+    width: 25%;
+}
+
+.buttons-container {
+    width: 75%;
+}
+
+.offers-button, .attributes-button {
+    font-family: "iA Writer Quattro S";
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 75%;
+}
+
+.offers-grid, .attributes-grid {
+    position: absolute;
+    bottom: 90px;
+    left: 15px;
+    right: 15px;
+    background: #a8a8a8;
+    border: 1px solid #424242;
+    padding: 10px;
+    z-index: 1;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.offer-item, .attribute-item {
+    border: 1px solid #424242;
+    margin: 2px 0 2px 0;
+    background-color: rgb(253, 255, 232);
+    padding: 2px 0 2px 0;
+
+    div, a {
+        padding: 2px 0 2px 0;
+    }
+}
+
+.offer-price {
+    color: #ce0000;
+}
+
+.offer-link {
+    font-size: 20px;;
+    color: #0074a1;
+}
+
+.attribute-label {
+    font-weight: bold;
+    color: rgb(59, 29, 0)
+}
+
+#search-bar {
+    font-family: "iA Writer Quattro S";
+    width: 75%;
+    height: 40px;
+    font-size: 21px;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 1280px) {
+    .search-button, #search-bar {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .search {
+        flex-direction: column;
+    }
+    .search-button {
+        width: 100%;
+    }
+    #search-bar {
+        width: 100%;
+    }
+}
+
+

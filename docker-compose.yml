@@ -1,0 +1,44 @@
+services:
+  backend:
+    build: ./web/backend
+    container_name: backend
+    ports:
+      - '1234:1234'
+    volumes:
+      - $PWD/web/backend:/app
+    networks:
+      - main-network
+    depends_on:
+      database:
+        condition: service_healthy
+    
+  frontend:
+    build: ./web/frontend
+    container_name: frontend
+    ports: 
+      - '8080:8080'
+    volumes:
+      - $PWD/web/frontend:/app
+    networks:
+      - main-network
+
+  database:
+    image: mysql:8.0
+    container_name: database
+    volumes:
+      - $PWD/database/guitardb.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '3306:3306'
+    networks:
+      - main-network
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: guitardb
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=1234
+      interval: 5s
+      timeout: 5s
+      retries: 55
+
+networks:
+  main-network:

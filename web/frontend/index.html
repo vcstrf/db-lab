@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <title>Guitars</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>ГИТАРЫ</h1>
+        </header>
+
+        <main>
+            <nav>
+                <div class="search">
+                    <input id="search-bar" type="text" placeholder="модель, производитель, тип или форма">
+                    <button class="search-button" onclick="search_products()">Search</button>
+                </div>
+            </nav>
+
+            <div class="products-grid"></div>
+
+        </main>
+
+        <script src="./src/guitars.js"></script>
+    </body>
+</html>
